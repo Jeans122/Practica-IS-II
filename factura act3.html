@@ -70,43 +70,7 @@
       <option value="transferencia">Transferencia bancaria</option>
     </select>
 
-    <button type="submit">Generar Factura</button>
-
-    <!-- Nuevo botón para mostrar la factura electrónica -->
-    <button type="button" onclick="mostrarFacturaElectronica()">Mostrar Factura Electrónica</button>
-  </form>
-
-  <script>
-    document.getElementById("facturaForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      // Aquí puedes agregar lógica para procesar el formulario, como enviar datos a un servidor o realizar cálculos.
-      alert("¡Factura generada con éxito!");
-    });
-
-    // Función para mostrar la factura electrónica
-    function mostrarFacturaElectronica() {
-      // Recopilar datos del formulario
-      var cliente = document.getElementById("cliente").value;
-      var fecha = document.getElementById("fecha").value;
-      var producto = document.getElementById("producto").value;
-      var cantidad = document.getElementById("cantidad").value;
-      var precio = document.getElementById("precio").value;
-      var metodoPago = document.getElementById("metodoPago").value;
-
-      // Crear factura electrónica 
-      var facturaElectronica = `
-        Factura Electrónica:
-        Cliente: ${cliente}
-        Fecha: ${fecha}
-        Producto: ${producto}
-        Cantidad: ${cantidad}
-        Precio unitario: ${precio}
-        Método de Pago: ${metodoPago}
-      `;
-
-      // Mostrar factura en una ventana emergente
-      alert(facturaElectronica);
-    }
+   
   </script>
 
 </body>
